@@ -57,7 +57,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
-                android:text="Register"
+                android:text="Sign Up"
                 android:textColor="@android:color/white"/>
 
         <TextView

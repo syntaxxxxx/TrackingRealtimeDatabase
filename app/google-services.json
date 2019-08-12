@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "315778628498",
+    "firebase_url": "https://tutorialtrackingmvp.firebaseio.com",
+    "project_id": "tutorialtrackingmvp",
+    "storage_bucket": "tutorialtrackingmvp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315778628498:android:26f3dd090752873f",
+        "android_client_info": {
+          "package_name": "com.syntax.tutorialtrackingmvp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "315778628498-2oknr10bh3clli82iif3dnu46ejqqrk9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.syntax.tutorialtrackingmvp",
+            "certificate_hash": "dbd967fc26bbaf48a6471b0d5fe9813963172ea8"
+          }
+        },
+        {
+          "client_id": "315778628498-3k9rn31an5mq8n8qc406oknud6tabg4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF05XPp2cP74KKVPqLMpNVo8elqs48cjs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "315778628498-3k9rn31an5mq8n8qc406oknud6tabg4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
