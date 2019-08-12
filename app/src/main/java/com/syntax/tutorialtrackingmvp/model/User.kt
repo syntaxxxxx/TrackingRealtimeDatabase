@@ -1,8 +1,9 @@
 package com.syntax.tutorialtrackingmvp.model
 
-data class User(
-    var name: String,
-    var email: String,
-    var password: String,
-    var uuid: String
-)
+class User() {
+    lateinit var name: String
+    lateinit var email: String
+    lateinit var password: String
+    lateinit var uuid: String
+}
+
