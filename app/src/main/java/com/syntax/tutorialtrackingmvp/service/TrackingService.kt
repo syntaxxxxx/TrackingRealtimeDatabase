@@ -48,8 +48,7 @@ class TrackingService : Service() {
         // Specify how often your app should request the device’s location
         request.setInterval(1000) // 1 seconds
 
-        //Get the most accurate location data available//
-
+        // Get the most accurate location data available
         request.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
         val client = LocationServices.getFusedLocationProviderClient(this)
         val path = "locations"
@@ -62,7 +61,7 @@ class TrackingService : Service() {
             client.requestLocationUpdates(request, object : LocationCallback() {
                 override fun onLocationResult(locationResult: LocationResult) {
 
-                    //Get a reference to the database, so your app can perform read and write operations
+                    // Get a reference to the database, so your app can perform read and write operations
                     val dr = FirebaseDatabase.getInstance().getReference(path)
                     val location = locationResult.getLastLocation()
                     if (location != null) {

@@ -32,6 +32,7 @@ class ListUserActivity : AppCompatActivity(), ListUserContract.ViewInterface {
         presenter
         onAttachView()
 
+        // Write database user
         database = FirebaseDatabase.getInstance().reference.child("user")
 
         //Check whether this app has access to the location permission//
@@ -45,8 +46,7 @@ class ListUserActivity : AppCompatActivity(), ListUserContract.ViewInterface {
             startTrackerService()
         } else {
 
-            //If the app doesn’t currently have access to the user’s location, then request access//
-
+            // If the app doesn’t currently have access to the user’s location, then request access
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
@@ -91,7 +91,6 @@ class ListUserActivity : AppCompatActivity(), ListUserContract.ViewInterface {
     override fun isError(msg: String) {
         toast(msg)
     }
-
 
     override fun onStart() {
         super.onStart()

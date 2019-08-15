@@ -35,6 +35,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, MapsContract.ViewI
         presenter
         onAttachView()
 
+        // Write database locations
         dr = FirebaseDatabase.getInstance().getReference().child("locations").child(intent.getStringExtra("id"))
         presenter.doGetLocation(dr)
 
