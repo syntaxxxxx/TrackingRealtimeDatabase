@@ -40,7 +40,7 @@ dependencies {
 
     // add library auth
     implementation 'com.google.firebase:firebase-auth:16.0.5'
-    implementation 'com.google.firebase:firebase-database:16.0.4'
+    implementation 'com.google.firebase:firebase-database:16.0.1'
 
     // add library anko
     implementation "org.jetbrains.anko:anko-commons:$anko_version"

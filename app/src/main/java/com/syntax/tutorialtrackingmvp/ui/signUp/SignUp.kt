@@ -7,9 +7,8 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.syntax.tutorialtrackingmvp.R
-import com.syntax.tutorialtrackingmvp.model.User
+import com.syntax.tutorialtrackingmvp.model.Users
 import com.syntax.tutorialtrackingmvp.ui.signIn.SignIn
-import com.syntax.tutorialtrackingmvp.ui.user.ListUserActivity
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -50,13 +49,14 @@ class SignUp : AppCompatActivity(), SignUpContarct.ViewInterface {
     override fun isSuccess(user: FirebaseUser?) {
 
         // save data user ke database base on uuid
-        val users = User()
+        val users = Users()
         users.name = edt_username.text.toString().trim()
         users.email = edt_email.text.toString().trim()
         users.password = edt_pass.text.toString().trim()
         users.uuid = user?.uid!!.toString()
         database?.child(user.uid)?.setValue(users)
-        startActivity<ListUserActivity>()
+        startActivity<SignIn>()
+        finish()
     }
 
     override fun isError(msg: String) {

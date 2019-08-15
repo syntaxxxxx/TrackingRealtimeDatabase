@@ -1,6 +1,6 @@
 package com.syntax.tutorialtrackingmvp.model
 
-data class Location(
+class Locations(
     var latitude: Double? = null,
     var longitude: Double? = null
 )

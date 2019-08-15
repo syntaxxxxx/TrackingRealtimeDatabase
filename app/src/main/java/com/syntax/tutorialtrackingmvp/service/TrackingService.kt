@@ -59,7 +59,6 @@ class TrackingService : Service() {
         if (permission == PackageManager.PERMISSION_GRANTED) {
 
             // then request location updates//
-
             client.requestLocationUpdates(request, object : LocationCallback() {
                 override fun onLocationResult(locationResult: LocationResult) {
 
@@ -68,7 +67,7 @@ class TrackingService : Service() {
                     val location = locationResult.getLastLocation()
                     if (location != null) {
                         // Save the location data to the database//
-                        dr.child(mAuth?.currentUser?.uid.toString()).setValue(location)
+                        dr.child(mAuth?.currentUser?.uid!!).setValue(location)
                     }
                 }
             }, null)

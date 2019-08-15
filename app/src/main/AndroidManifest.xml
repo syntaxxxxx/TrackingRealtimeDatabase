@@ -18,6 +18,9 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme" tools:ignore="GoogleAppIndexingWarning">
+
+        <service android:name=".service.TrackingService" />
+
         <activity android:name=".ui.signIn.SignIn">
 
         </activity>
@@ -51,6 +54,8 @@
         <activity
                 android:name=".ui.MapsActivity"
                 android:label="@string/title_activity_maps">
+
+
 
         </activity>
     </application>

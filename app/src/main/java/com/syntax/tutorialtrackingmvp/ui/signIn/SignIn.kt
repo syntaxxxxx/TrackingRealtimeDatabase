@@ -47,6 +47,7 @@ class SignIn : AppCompatActivity(), SignInContract.ViewInterface {
 
     override fun isSuccess() {
         startActivity<ListUserActivity>()
+        finish()
     }
 
     override fun isEmptyField() {

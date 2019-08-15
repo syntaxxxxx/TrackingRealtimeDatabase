@@ -3,12 +3,12 @@ package com.syntax.tutorialtrackingmvp.ui.user
 import android.util.Log
 import com.google.firebase.database.*
 import com.syntax.tutorialtrackingmvp.base.BasePresenter
-import com.syntax.tutorialtrackingmvp.model.User
+import com.syntax.tutorialtrackingmvp.model.Users
 
 class ListUserPresenter(var _view: ListUserContract.ViewInterface? = null) :
     BasePresenter<ListUserContract.ViewInterface>, ListUserContract.PresenterInterface {
 
-    var data: MutableList<User> = mutableListOf()
+    var data: MutableList<Users> = mutableListOf()
 
     override fun onAttach(view: ListUserContract.ViewInterface) {
         _view = view
@@ -28,8 +28,8 @@ class ListUserPresenter(var _view: ListUserContract.ViewInterface? = null) :
             override fun onDataChange(p0: DataSnapshot) {
                 data.clear()
                 for (dataSnapshot in p0.children) {
-                    val users = User()
-                    val getDataUser = dataSnapshot.getValue(User::class.java)
+                    val users = Users()
+                    val getDataUser = dataSnapshot.getValue(Users::class.java)
 
                     // Set data to model user
                     users.uuid = getDataUser?.uuid!!
@@ -44,7 +44,7 @@ class ListUserPresenter(var _view: ListUserContract.ViewInterface? = null) :
 
             override fun onCancelled(p0: DatabaseError) {
                 // Failed to read value
-                Log.w("TAG", "Failed to read value.", p0.toException())
+                Log.w("TAG", "Failed to read value : ${p0.toException()}")
                 _view?.isError(p0.toException().toString())
             }
         })
